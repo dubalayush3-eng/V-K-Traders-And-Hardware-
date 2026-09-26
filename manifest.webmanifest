@@ -1,14 +1,13 @@
 {
-  "name": "VK Traders Billing",
+  "name": "VK Traders & Hardware - Billing System",
   "short_name": "VK Billing",
-  "description": "Billing and inventory",
-  "id": "./",
-  "start_url": "./",
-  "scope": "./",
+  "description": "Professional billing and inventory management system with split payment and offline support",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "orientation": "any",
-  "background_color": "#0d1a2b",
-  "theme_color": "#0f6e5c",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#15355c",
   "icons": [
     {
       "src": "icon-192.png",
@@ -28,5 +27,49 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ]
+  ],
+  "categories": ["business", "productivity"],
+  "screenshots": [
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "New Bill",
+      "short_name": "New Bill",
+      "description": "Create a new billing entry",
+      "url": "/?tab=billing",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Reports",
+      "short_name": "Reports",
+      "description": "View sales and payment reports",
+      "url": "/?tab=reports",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
 }
